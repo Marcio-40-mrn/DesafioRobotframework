@@ -13,7 +13,7 @@ ${DataManufactureInput}                     xpath=//input[@id='dateofmanufacture
 ${NumSeats1ComboBx}                         xpath=//select[@id='numberofseats']
 ${NumSeats2ComboBx}                         xpath=//select[@id='numberofseatsmotorcycle']
 ${RightDriverRadio}                         xpath=//p[@class='group']
-${RightDriverRadioFix}                      xpath=//p[@class='group']//input[@id='righthanddriveno']
+${RightDriverRadioFix}                      xpath=//form[@id="insurance-form"]/div/section[1]/div[7]/p/label[2]/span
 ${FuelTypeComboBx}                          xpath=//select[@id='fuel']
 ${PayloadInput}                             xpath=//input[@id='payload']
 ${TotalWeightInput}                         xpath=//input[@id='totalweight']

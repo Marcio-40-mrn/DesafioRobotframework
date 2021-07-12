@@ -13,6 +13,7 @@ ${URL}          http://sampleapp.tricentis.com/101/app.php
 *** Keywords ***
 Abrir navegador
     Open Browser                    ${URL}           ${BROWSER}
+    Maximize Browser Window
     Capture Page Screenshot
 
 
@@ -45,13 +46,26 @@ Click No Item
     Click Element                       ${item}
 
 
+Olha se Existe
+    [Arguments]         ${element}
+    Wait Until Element Is Visible       ${element}       60
+
+
 Verifica Se ComboBox Esta Na Tela
-    [Arguments]             ${pageObject}                                   ${poção}
-    Run Keyword If          Element Should Be Visible   ${pageObject}        Seleciona Item Combo Box    ${pageObject}   ${poção}
+    [Arguments]             ${pageObject}                        ${opção}
+    ${Status}           Run Keyword And Return Status           Olha se Existe        ${pageObject}          
+    Log     ${Status}
+    IF          '${Status}' == 'True'
+        Seleciona Item Combo Box    ${pageObject}   ${opção}
+    END
 
 
 Verifica Se Input Esta Na Tela
-    [Arguments]             ${pageObject}                                   ${poção}
-    Run Keyword If          Element Should Be Visible   ${pageObject}        Preenche Text    ${pageObject}   ${poção}
+    [Arguments]             ${pageObject}                        ${opção}
+    ${Status}           Run Keyword And Return Status           Olha se Existe        ${pageObject}
+    Log     ${Status}
+    IF          '${Status}' == 'True'
+        Preenche Text    ${pageObject}   ${opção}
+    END
 
 

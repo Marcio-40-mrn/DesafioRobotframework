@@ -9,11 +9,17 @@ Dado que acessei o site Tricents
 
 Quando preencho as informações diponiveis na tela "${make}", "${model}", "${cylinder}", "${kws}", "${date}", "${number}", "${boolean}", "${fuel}", "${payload}", "${weight}", "${price}", "${plate}" e "${mileage}"
     Verifica Se ComboBox Esta Na Tela       ${MakeComboBx}                  ${make}
+    # Seleciona Item Combo Box                ${MakeComboBx}                  ${make}
     Verifica Se ComboBox Esta Na Tela       ${ModelComboBx}                 ${model}
+    # Seleciona Item Combo Box                ${ModelComboBx}                 ${model}
     Verifica Se Input Esta Na Tela          ${CylinderInput}                ${cylinder}
+    # Preenche Text                           ${CylinderInput}                ${cylinder}
     Verifica Se Input Esta Na Tela          ${EnginerInput}                 ${kws}
+    # Preenche Text                           ${EnginerInput}                 ${kws}
     Verifica Se Input Esta Na Tela          ${DataManufactureInput}         ${date}
+    # Preenche Text                           ${DataManufactureInput}         ${date}
     Verifica Se ComboBox Esta Na Tela       ${NumSeats1ComboBx}             ${number}
+    # Seleciona Item Combo Box                ${NumSeats1ComboBx}             ${number}
     Click No Item                           ${RightDriverRadioFix}
     Verifica Se ComboBox Esta Na Tela       ${NumSeats2ComboBx}             ${number}
     Verifica Se ComboBox Esta Na Tela       ${FuelTypeComboBx}              ${fuel}
