@@ -14,7 +14,7 @@ Quando preencho as informações diponiveis na tela "${make}", "${model}", "${cy
     Verifica Se Input Esta Na Tela          ${EnginerInput}                 ${kws}
     Verifica Se Input Esta Na Tela          ${DataManufactureInput}         ${date}
     Verifica Se ComboBox Esta Na Tela       ${NumSeats1ComboBx}             ${number}
-    Click No Item                           ${RightDriverRadioFix}
+    Verifica Se Item Esta Na Tela           ${RightDriverRadioFix}
     Verifica Se ComboBox Esta Na Tela       ${NumSeats2ComboBx}             ${number}
     Verifica Se ComboBox Esta Na Tela       ${FuelTypeComboBx}              ${fuel}
     Verifica Se Input Esta Na Tela          ${PayloadInput}                 ${payload}              
