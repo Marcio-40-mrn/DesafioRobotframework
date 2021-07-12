@@ -31,6 +31,14 @@ Seleciona Item Combo Box
     Wait Until Element Is Visible       ${Item}             20
     Click Element                       ${Item}
 
+Seleciona Item Check Box Right Driver
+    [Arguments]                 ${element}
+    IF                          '${element}' == 'Yes'
+            Click No Item       ${RightDriverRadioYes}
+    ELSE
+            Click No Item       ${RightDriverRadioNo}
+    END 
+
 
 Preenche Text
     [Arguments]                         ${input}            ${Text}
@@ -51,20 +59,30 @@ Olha se Existe
     Wait Until Element Is Visible       ${element}          20
 
 
+
 Verifica Se ComboBox Esta Na Tela
     [Arguments]             ${pageObject}                        ${opção}
-    ${Status}           Run Keyword And Return Status           Olha se Existe          ${pageObject}          
-    Run Keyword If          '${Status}' == 'True'           Seleciona Item Combo Box    ${pageObject}   ${opção}
+    ${Status}           Run Keyword And Return Status           Olha se Existe                                  ${pageObject}          
+    Run Keyword If          '${Status}' == 'True'           Seleciona Item Combo Box                            ${pageObject}   ${opção}
     
 
 
 Verifica Se Input Esta Na Tela
     [Arguments]             ${pageObject}                        ${opção}
-    ${Status}           Run Keyword And Return Status           Olha se Existe          ${pageObject}          
-    Run Keyword If          '${Status}' == 'True'           Preenche Text               ${pageObject}   ${opção}
+    ${Status}           Run Keyword And Return Status           Olha se Existe                                  ${pageObject}          
+    Run Keyword If          '${Status}' == 'True'               Preenche Text                                   ${pageObject}   ${opção}
+
+
 
 Verifica Se Item Esta Na Tela
     [Arguments]             ${pageObject}
-    ${Status}           Run Keyword And Return Status           Olha se Existe          ${pageObject}          
-    Run Keyword If          '${Status}' == 'True'           Click No Item               ${pageObject}
+    ${Status}           Run Keyword And Return Status           Olha se Existe                                  ${pageObject}          
+    Run Keyword If          '${Status}' == 'True'               Click No Item                                   ${pageObject}
+
+
+
+Verifica CheckBox Right Driver e seleciona
+    [Arguments]             ${pageObject}                        ${opção}
+    ${Status}           Run Keyword And Return Status           Olha se Existe                                  ${pageObject}
+    Run Keyword If          '${Status}' == 'True'               Seleciona Item Check Box Right Driver           ${opção}   
         

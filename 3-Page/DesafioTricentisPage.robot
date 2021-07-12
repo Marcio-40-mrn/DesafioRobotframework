@@ -12,8 +12,9 @@ ${EnginerInput}                             xpath=//input[@id='engineperformance
 ${DataManufactureInput}                     xpath=//input[@id='dateofmanufacture']
 ${NumSeats1ComboBx}                         xpath=//select[@id='numberofseats']
 ${NumSeats2ComboBx}                         xpath=//select[@id='numberofseatsmotorcycle']
-${RightDriverRadio}                         xpath=//p[@class='group']
-${RightDriverRadioFix}                      xpath=//form[@id="insurance-form"]/div/section[1]/div[7]/p/label[2]/span
+${RightDriverRadio}                         xpath=//div[@class='field']//*[contains(text(),'Right Hand Drive')]
+${RightDriverRadioYes}                      xpath=//label[@class='ideal-radiocheck-label'][1]//span
+${RightDriverRadioNo}                       xpath=//label[@class='ideal-radiocheck-label'][2]//span
 ${FuelTypeComboBx}                          xpath=//select[@id='fuel']
 ${PayloadInput}                             xpath=//input[@id='payload']
 ${TotalWeightInput}                         xpath=//input[@id='totalweight']
